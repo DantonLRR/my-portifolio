@@ -1,5 +1,5 @@
 import { Box, Container, Grid, styled, Typography } from "@mui/material";
-import Avatar from "../../../../assets/images/avatar1.jpeg";
+import Avatar from "../../../../assets/images/avatar.jpeg";
 import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 
@@ -11,11 +11,18 @@ const Hero = () => {
         backgroundColor: theme.palette.primary.main,
         height: "100vh",
         display: "flex",
-        alignItems: "center"
+        alignItems: "center",
+        [theme.breakpoints.up('xs')]:  {//<= mobile
+            paddingTop:"100px"
+        },
+        [theme.breakpoints.up('md')]:  {//>= mobile
+            paddingTop:"0px"
+
+        }
 
     }))
     const StyledImage = styled("img")(({ theme }) => ({
-        width: "90%",
+        width: "75%",
         borderRadius: "50%",
         border: `1px solid ${theme.palette.primary.contrastText}`
     }))

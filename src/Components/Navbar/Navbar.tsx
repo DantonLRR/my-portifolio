@@ -7,7 +7,7 @@ const Navbar = () => {
     }))
     return (
         <>
-            <AppBar position="relative">
+            <AppBar position="absolute">
                 <Styledtoolbar>
                     <MenuItem> About</MenuItem>
                     <MenuItem> Skills</MenuItem>
